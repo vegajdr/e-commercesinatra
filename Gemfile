@@ -5,6 +5,8 @@ gem 'pry'
 gem 'sinatra', require: false
 gem 'sinatra-contrib'
 
+gem 'faker'
+
 group :development do
   gem 'sqlite3'
   gem 'minitest'
