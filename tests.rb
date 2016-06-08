@@ -3,7 +3,7 @@ require 'minitest/autorun'
 require 'minitest/focus'
 
 require 'minitest/reporters'
-Minitest::Reporters.use! Minitest::Reporters::ProgressReporter.new
+Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 
 require 'rack/test'
 require './app'
@@ -36,7 +36,6 @@ class AppTests < Minitest::Test
     assert_equal 1, User.count
     assert_equal "New", User.first.first_name
   end
-
   def test_users_can_add_items
     user = make_existing_user
     header "Authorization", user.password
@@ -109,5 +108,6 @@ class AppTests < Minitest::Test
     assert_equal 200, r.status
     body = JSON.parse r.body
     assert_equal 3, body.count
+    binding.pry
   end
 end

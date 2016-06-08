@@ -33,7 +33,6 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     multi_json (1.12.1)
-    pg (0.18.3)
     pry (0.10.2)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -71,7 +70,6 @@ DEPENDENCIES
   minitest
   minitest-focus
   minitest-reporters
-  pg
   pry
   rack-test
   sinatra
